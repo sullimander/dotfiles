@@ -1,0 +1,14 @@
+bundler
+byebug
+pry
+pry-byebug
+pry-nav
+pry-rails
+pry-stack_explorer
+rails
+rake
+rubocop
+rubocop-performance
+rubocop-rails
+rubocop-rspec
+ruby-debug-ide
