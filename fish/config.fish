@@ -23,7 +23,11 @@ test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_in
 test -e /usr/local/share/autojump/autojump.fish ; and source /usr/local/share/autojump/autojump.fish
 
 set -x EDITOR vim
+
+# Use vim key bindings and clear the mode prompt since it's included in the right prompt
 fish_vi_key_bindings
+function fish_mode_prompt; end
+funcsave fish_mode_prompt
 
 # Load additional settings
 test -e $HOME/.config/fish/aliases.fish ; and source $HOME/.config/fish/aliases.fish
