@@ -1,15 +1,19 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
@@ -33,9 +37,19 @@ set nowrap " don't wrap text
 set cursorline " highlight current line
 set showmatch " highlight matching [{()}]
 
+" splits
+" use ctrl+h,j,k,l to navigate splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
 " folding
 set nofoldenable " no folding by default
-set foldmethod=syntax " fold based on language syntax
+" set foldmethod=syntax " fold based on language syntax
+set foldmethod=indent " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set foldlevel=1 " fold one level at a time
 
@@ -73,12 +87,19 @@ autocmd BufWritePre * :call CleanExtraSpacesAndLines()
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" configure the CtrlP plugin
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'ra'
+" configure the Fugitive pluging
+nnoremap <silent> <leader>a :Git add %<cr>
 
-nnoremap <silent> <leader>t :CtrlP<cr>
-nnoremap <silent> <leader>r :CtrlPBuffer<cr>
+" configure the fzf vim plugin
+" empty value to disable preview window altogether
+let g:fzf_preview_window = []
+
+" popup window (anchored to the bottom of the current window)
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.4, 'relative': v:true, 'yoffset': 1.0 } }
+
+nnoremap <silent> <leader>t :Files<CR>
+nnoremap <silent> <leader>r :Buffers<CR>
+nnoremap <silent> <leader>f :Rg<CR>
 
 " configure the lightline plugin
 let g:lightline = {
@@ -101,9 +122,8 @@ let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeShowHidden = 1
 
-" Exit Vim if NERDTree is the only window remaining in the only tab.
+" exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
 
 " configure the vim-go plugin
 let g:go_fmt_command = "goimports"
