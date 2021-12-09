@@ -20,6 +20,7 @@ prompt
 export CLICOLOR=1
 export GIT_EDITOR='vim'
 export EDITOR='vim'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore-vcs'
 
 [[ -s $HOME/.git-prompt.sh ]] && source $HOME/.git-prompt.sh
 [[ -s $HOME/.cargo/env ]] && source $HOME/.cargo/env

@@ -6,7 +6,7 @@
 home=${HOME-"~"}
 me=${BASH_SOURCE[0]}
 dir=$( cd $( dirname $me ) && pwd )
-linkables=(*rc aliases git* mackup.cfg vim)
+linkables=(*rc aliases git* mackup.cfg vim rgignore)
 
 function link_file() {
   local src=$dir/$1

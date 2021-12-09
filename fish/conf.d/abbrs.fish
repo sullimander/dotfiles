@@ -25,6 +25,7 @@ if not set -q abbrs_initialized
   abbr -a c. c .
   abbr -a e. e .
   abbr -a o. o .
+  abbr -a ef 'e (fzf)'
 
   abbr -a yt youtube-dl
 

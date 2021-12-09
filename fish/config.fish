@@ -22,7 +22,9 @@ gpgconf --launch gpg-agent
 test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_integration.fish
 test -e /usr/local/share/autojump/autojump.fish ; and source /usr/local/share/autojump/autojump.fish
 
-set -x EDITOR vim
+set -gx EDITOR nvim
+set -gx GIT_EDITOR nvim
+set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --no-ignore-vcs'
 
 # Use vim key bindings and clear the mode prompt since it's included in the right prompt
 fish_vi_key_bindings

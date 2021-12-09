@@ -17,14 +17,21 @@ alias md='mkdir -p'
 alias hist='fc -l 1'
 alias hist:clear='rm -rf ~/.bash_history'
 
-alias grep='grep --color=auto'
+# colored grep
+# Need to check an existing file for a pattern that will be found to ensure
+# that the check works when on an OS that supports the color option
+if grep --color=auto "a" "~/.bashrc" &> /dev/null
+then
+  alias grep='grep --color=auto'
+fi
+
 alias grepn='grep -n'
 alias grepr='grep -rnH'
 
 alias c='code'
 alias e='v'
 alias o='open'
-alais v='nvim'
+alias v='nvim'
 
 alias yt='youtube-dl'
 
@@ -36,7 +43,7 @@ alias o.='o .'
 alias aliases='e $HOME/.config/fish/'
 alias aliases:local='e $HOME/.aliases.local'
 
-# homebrew alaises
+# homebrew aliases
 alias bs='brew services'
 alias bsl='brew services list'
 alias bsr='brew services run'
@@ -113,7 +120,7 @@ alias gst='git status'
 alias gsta='git stash save'
 alias gstp='git stash pop'
 
-# golang alaises
+# golang aliases
 alias gob='go build'
 alias goc='go clean'
 alias god='go doc'

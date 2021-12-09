@@ -22,7 +22,7 @@ abbr -a fs bundle exec foreman start
 # Rails abbreviations
 abbr -a rc bundle exec rails console
 abbr -a rdb bundle exec rails dbconsole
-abbr -a rg bundle exec rails generate
+abbr -a rgen bundle exec rails generate
 abbr -a rgm bundle exec rails generate migration
 abbr -a rr bundle exec rake routes
 abbr -a rs bundle exec rails server

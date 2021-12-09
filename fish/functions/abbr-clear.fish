@@ -1,6 +1,7 @@
 function abbr-clear
+  set -e abbrs_initialized
+
   for ab in (abbr -l)
-    set -e abbrs_initialized
     abbr -e -- $ab
   end
 end
