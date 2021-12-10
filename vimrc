@@ -48,8 +48,7 @@ set splitright
 
 " folding
 set nofoldenable " no folding by default
-" set foldmethod=syntax " fold based on language syntax
-set foldmethod=indent " fold based on indent
+set foldmethod=syntax " fold based on language syntax
 set foldnestmax=10 " deepest fold is 10 levels
 set foldlevel=1 " fold one level at a time
 
