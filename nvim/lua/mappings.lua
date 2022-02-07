@@ -36,3 +36,6 @@ nmap('<leader>t', '<cmd>lua require("telescope.builtin").find_files({hidden=true
 nmap('<leader>r', '<cmd>Telescope buffers<cr>')
 nmap('<leader>f', '<cmd>Telescope live_grep<cr>')
 nmap('<leader>b', '<cmd>lua require("telescope").extensions.file_browser.file_browser()<CR>')
+
+-- Spellcheck
+nmap('<leader>s', ':set spell!<cr>')
