@@ -2,10 +2,6 @@ local set = vim.opt -- map vim.opt to set to make converting viml easier
 
 vim.g.mapleader = ','
 
-set.background = 'dark'
-set.termguicolors = true
-vim.cmd('colorscheme onedark')
-
 vim.cmd('filetype plugin indent on') -- enable filetype plugin and indent detection
 vim.cmd('syntax on') -- enable syntax highlighting
 
@@ -17,6 +13,10 @@ set.startofline = true
 set.cursorline = true -- highlight current line
 set.showmatch = true -- highlight matching [{()}]
 set.number = true -- show line numbers
+set.numberwidth = 4
+set.signcolumn = 'yes'
+set.colorcolumn = '100'
+set.mouse = 'a'
 
 set.backup = false -- do not backup files
 set.swapfile = false -- also do not create swap files
@@ -36,6 +36,7 @@ set.wildignore = { '*/tmp/*', '*.so', '*.swp', '*.zip', '*.DS_Store', '*/node_mo
 set.expandtab = true -- insert spaces when tab key is pressed
 set.tabstop = 2 -- 1 tab == 2 spaces
 set.shiftwidth = 2 -- 1 indentation == 2 spaces
+set.smartindent = true
 
 -- splits
 set.splitbelow = true
