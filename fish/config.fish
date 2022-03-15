@@ -15,7 +15,8 @@ set fish_greeting "GOPATH: $GOPATH"
 
 # GPG Settings
 set -gx GPG_TTY (tty)
-set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+# set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+set -gx SSH_AUTH_SOCK $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 gpgconf --launch gpg-agent
 
 # Load addtional apps

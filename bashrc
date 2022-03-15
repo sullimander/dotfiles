@@ -29,3 +29,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore-vcs'
 [[ -s $HOME/.bashrc.local ]] && source $HOME/.bashrc.local
 
 [[ -s $HOME/.aliases ]] && source $HOME/.aliases
+
+if test $(which op); then
+  source <(op completion bash)
+fi
