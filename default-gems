@@ -1,5 +1,6 @@
 bundler
 byebug
+neovim
 pry
 pry-byebug
 pry-nav
@@ -12,3 +13,4 @@ rubocop-performance
 rubocop-rails
 rubocop-rspec
 ruby-debug-ide
+solargraph
