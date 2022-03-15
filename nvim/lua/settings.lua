@@ -49,6 +49,6 @@ set.foldnestmax = 10 -- deepest fold is 10 levels
 set.foldlevel = 1 -- fold one level at a time
 
 -- spell checking
-set.spell = true
+set.spell = false
 set.spelllang = { 'en', 'cjk' }
 set.spellsuggest = { 'best', '9' }
