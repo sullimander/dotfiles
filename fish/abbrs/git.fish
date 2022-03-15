@@ -31,7 +31,7 @@ abbr -a gsb git status -sb
 abbr -a gsc git switch -c
 abbr -a gsd git switch develop
 abbr -a gsi git submodule init
-abbr -a gsm git switch master
+abbr -a gsm 'git switch master || git switch main'
 abbr -a gss git status -s
 abbr -a gst git status
 abbr -a gsta git stash save
