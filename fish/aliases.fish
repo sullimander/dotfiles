@@ -38,19 +38,6 @@ function db:conflicts:rmf
   find ~ -path "*DropboxConflicted*'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*" -exec rm -f "{}" \;
 end
 
-# Golang
-function gpgo;
-  set -U GODIR src/gopro/go
-  set -gx GOPATH $HOME/$GODIR
-  echo "GOPATH: $GOPATH"
-end
-
-function pgo;
-  set -U GODIR src/personal/go
-  set -gx GOPATH $HOME/$GODIR
-  echo "GOPATH: $GOPATH"
-end
-
 function rd:start
   brew services run postgresql
   brew services run redis

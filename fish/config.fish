@@ -1,6 +1,4 @@
-if test -z $GODIR
-  set -x GODIR src/personal/go
-end
+set fish_greeting ""
 
 # Path Settings
 fish_add_path /usr/local/sbin
@@ -10,8 +8,7 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path $GOPATH/bin
 
 # Golang Settings
-set -gx GOPATH $HOME/$GODIR
-set fish_greeting "GOPATH: $GOPATH"
+set -gx GOPATH $HOME/src/go
 
 # GPG Settings
 set -gx GPG_TTY (tty)
