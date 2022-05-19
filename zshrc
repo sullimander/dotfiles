@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="gallois"
+ZSH_THEME=""
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
@@ -80,7 +79,6 @@ if [ -f "$HOME/.aliases" ] ; then
   source "$HOME/.aliases"
 fi
 
-
 # Set up local only aliases and config
 if [ -f "$HOME/.aliases.local" ] ; then
   source "$HOME/.aliases.local"
@@ -89,3 +87,5 @@ fi
 if [ -f "$HOME/.zshrc.local" ] ; then
   source "$HOME/.zshrc.local"
 fi
+
+eval "$(starship init zsh)"
