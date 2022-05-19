@@ -2,11 +2,13 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- general
+  use 'ggandor/lightspeed.nvim'
   use 'jiangmiao/auto-pairs'
   use 'kyazdani42/nvim-web-devicons'
   use 'navarasu/onedark.nvim'
   use 'ntpeters/vim-better-whitespace'
   use 'nvim-lualine/lualine.nvim'
+  use 'ray-x/lsp_signature.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-surround'
@@ -26,6 +28,9 @@ return require('packer').startup(function()
   }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  -- fish
+  use 'dag/vim-fish'
 
   -- git
   use 'github/copilot.vim'
