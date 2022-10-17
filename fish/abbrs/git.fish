@@ -36,3 +36,8 @@ abbr -a gss git status -s
 abbr -a gst git status
 abbr -a gsta git stash save
 abbr -a gstp git stash pop
+
+abbr -a ghb gh browse
+abbr -a ghp gh pr
+abbr -a ghpc gh pr create
+abbr -a ghpd gh pr create -d
