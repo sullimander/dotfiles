@@ -1,7 +1,7 @@
 # rbenv abbreviations
-abbr -a rbvs asdf list ruby
-abbr -a rbi asdf install ruby
-abbr -a rbr asdf reshim ruby
+abbr -a rbvs rbenv versions
+abbr -a rbi rbenv install
+abbr -a rbr rbenv rehash
 
 # bundler abbreviations
 abbr -a be bundle exec

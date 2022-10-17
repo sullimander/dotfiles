@@ -134,10 +134,10 @@ alias gor='go run'
 alias got='go test'
 alias gov='go vet'
 
-# ruby aliases
-alias rbvs='asdf list ruby'
-alias rbi='asdf install ruby'
-alias rbr='asdf reshim ruby'
+# rbenv aliases
+alias rbvs='rbenv versions'
+alias rbi='rbenv install'
+alias rbr='rbenv rehash'
 
 # bundler aliases
 alias be='bundle exec'

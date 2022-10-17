@@ -48,5 +48,6 @@ return require('packer').startup(function()
   -- Ruby
   use { 'tpope/vim-bundler', ft = 'ruby' }
   use { 'tpope/vim-rails', ft = 'ruby' }
+  use { 'tpope/vim-rbenv', ft = 'ruby' }
   use { 'vim-ruby/vim-ruby', ft = 'ruby' }
 end)
