@@ -10,7 +10,7 @@ export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore-vcs'
 
 [[ -s $HOME/.cargo/env ]] && source $HOME/.cargo/env
-[[ -s /usr/local/etc/profile.d/autojump.sh ]] && source /usr/local/etc/profile.d/autojump.sh
+[[ -s /opt/homebrew/etc/profile.d/autojump.sh ]] && source /opt/homebrew/etc/profile.d/autojump.sh
 
 [[ -s $HOME/.bashrc.local ]] && source $HOME/.bashrc.local
 
