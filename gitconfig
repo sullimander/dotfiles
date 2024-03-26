@@ -68,6 +68,8 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [help]
 	autocorrect = 1
 [mergetool]
@@ -80,3 +82,11 @@
 	defaultBranch = main
 [url "git@github.com:gopro/"]
 	insteadOf = https://github.com/gopro/
+[merge]
+	conflictstyle = zdiff3
+[rerere]
+	enabled = true
+[gitbutler]
+	aiModelProvider = openai
+	aiOpenAIKeyOption = butlerAPI
+	signCommits = true
