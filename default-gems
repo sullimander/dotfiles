@@ -13,4 +13,7 @@ rubocop-performance
 rubocop-rails
 rubocop-rspec
 ruby-debug-ide
+ruby-lsp
 solargraph
+sorbet
+standardrb
