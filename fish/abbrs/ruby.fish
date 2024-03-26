@@ -31,3 +31,11 @@ abbr -a plog tail -f log/production.log
 abbr -a qlog tail -f log/qa.log
 abbr -a slog tail -f log/staging.log
 abbr -a tlog tail -f log/test.log
+
+# bin/... abbreviations
+abbr -a br bin/rails
+abbr -a brc bin/rubocop
+abbr -a brca bin/rubocop --autocorrect
+abbr -a brcA bin/rubocop -A
+abbr -a brs bin/rspec
+abbr -a brss bin/rspec spec
