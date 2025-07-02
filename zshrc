@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 export GIT_EDITOR='zed --wait'
 export EDITOR='zed --wait'
-export VISUAL='zed'
+export VISUAL='zed --wait'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

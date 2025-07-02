@@ -19,7 +19,7 @@ test -e /opt/homebrew/share/autojump/autojump.fish ; and source /opt/homebrew/sh
 
 set -gx GIT_EDITOR "zed --wait"
 set -gx EDITOR "zed --wait"
-set -gx VISUAL zed
+set -gx VISUAL "zed --wait"
 set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --no-ignore-vcs'
 
 # Use vim key bindings and clear the mode prompt since the cursor should indicate the mode
