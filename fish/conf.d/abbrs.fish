@@ -30,6 +30,7 @@ abbr -a e zed
 abbr -a o open
 abbr -a v nvim
 abbr -a z zed
+abbr -a zp zed-preview
 
 abbr -a c. c .
 abbr -a e. e .

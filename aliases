@@ -29,9 +29,10 @@ alias grepn='grep -n'
 alias grepr='grep -rnH'
 
 alias c='code-insiders'
-alias e='v'
+alias e='z'
 alias o='open'
 alias v='nvim'
+alias z='zed'
 
 alias yt='youtube-dl'
 

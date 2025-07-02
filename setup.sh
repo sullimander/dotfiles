@@ -8,9 +8,9 @@ me=${BASH_SOURCE[0]}
 dir=$( cd $( dirname $me ) && pwd )
 
 linkables=(*rc aliases git* mackup.cfg vim rgignore)
-config_linkables=(fish nvim starship.toml)
+config_linkables=(fish ghostty nvim starship.toml zed/*)
 
-mkdir -p $home/.config
+mkdir -p $home/.config/zed
 mkdir -p $home/.rbenv
 
 function link_file() {
@@ -36,7 +36,6 @@ if [[ "$1" == "install" ]]; then
   done
 
   link_file default-gems rbenv/default-gems
-  link_file zed-settings.json config/zed/settings.json
 elif [[ "$1" == "uninstall" ]]; then
   for link in "${linkables[@]}"; do
     unlink_file $link
@@ -47,7 +46,6 @@ elif [[ "$1" == "uninstall" ]]; then
   done
 
   unlink_file default-gems rbenv/default-gems
-  unlink_file zed-settings.json config/zed/settings.json
 else
   echo "Usage: $me [install|uninstall]"
   exit 1

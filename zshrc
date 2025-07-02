@@ -61,12 +61,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export GIT_EDITOR='zed --wait'
+export EDITOR='zed --wait'
+export VISUAL='zed'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
