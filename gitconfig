@@ -71,7 +71,7 @@
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [help]
-	autocorrect = 1
+	autocorrect = prompt
 [mergetool]
 	keepBackup = false
 [pull]
@@ -80,13 +80,13 @@
 	default = tracking
 [init]
 	defaultBranch = main
-[url "git@github.com:gopro/"]
-	insteadOf = https://github.com/gopro/
 [merge]
 	conflictstyle = zdiff3
 [rerere]
 	enabled = true
 [gitbutler]
-	aiModelProvider = openai
+	aiModelProvider = anthropic
 	aiOpenAIKeyOption = butlerAPI
 	signCommits = true
+[url "ssh://git@github.com/gopro/"]
+	insteadOf = https://github.com/gopro/
