@@ -5,8 +5,9 @@ if test $(which brew); then
 fi
 
 export CLICOLOR=1
-export GIT_EDITOR='vim'
-export EDITOR='vim'
+export GIT_EDITOR='zed --wait'
+export EDITOR='zed --wait'
+export VISUAL='zed --wait'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore-vcs'
 
 [[ -s $HOME/.cargo/env ]] && source $HOME/.cargo/env
