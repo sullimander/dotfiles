@@ -2,7 +2,7 @@
   {
     "label": "rspec $ZED_RELATIVE_FILE:$ZED_ROW",
     "command": "bin/rspec",
-    "args": ["\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
+    "args": ["$ZED_RELATIVE_FILE:$ZED_ROW"],
     "tags": ["ruby-test"]
   }
 ]
