@@ -10,6 +10,7 @@ dir=$( cd $( dirname $me ) && pwd )
 linkables=(*rc aliases git* mackup.cfg vim rgignore)
 config_linkables=(fish ghostty nvim starship.toml zed/*)
 
+mkdir -p $home/.config
 mkdir -p $home/.config/zed
 mkdir -p $home/.rbenv
 
