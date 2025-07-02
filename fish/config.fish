@@ -17,8 +17,8 @@ set -gx SSH_AUTH_SOCK $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t
 # Load addtional apps
 test -e /opt/homebrew/share/autojump/autojump.fish ; and source /opt/homebrew/share/autojump/autojump.fish
 
-set -gx GIT_EDITOR zed --wait
-set -gx EDITOR zed --wait
+set -gx GIT_EDITOR "zed --wait"
+set -gx EDITOR "zed --wait"
 set -gx VISUAL zed
 set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --no-ignore-vcs'
 
