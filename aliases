@@ -168,7 +168,7 @@ alias qlog='tail -f log/qa.log'
 alias slog='tail -f log/staging.log'
 alias tlog='tail -f log/test.log'
 alias rd:start='brew services restart postgresql@17 && brew services restart redis'
-alias rd:stop='brew services stop postgresql@17 && brew services stop redis'
+alias rd:stop='brew services stop postgresql@17 && brew services stop redis && brew services stop mongodb-community'
 
 
 test -e "${HOME}/.aliases.local" && source "${HOME}/.aliases.local"
