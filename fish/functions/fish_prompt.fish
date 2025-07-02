@@ -12,22 +12,17 @@ function fish_prompt
   __git_prompt
   __ruby_prompt
 
-  if test $TERM_PROGRAM != "WarpTerminal"
-    echo ""
-  end
+  echo ""
 
   __duration_prompt
 
-  set_color red
-  if test $TERM_PROGRAM = "WarpTerminal"; and test $last_status != 0
-    echo -n "!"
+  if test $last_status -eq 0
+    set_color green
   else
-    switch $last_status
-    case 0
-      set_color green
-    end
-    echo -n "❯ "
+    set_color red
   end
+
+  echo -n "❯ "
 
   set_color normal
 end
@@ -57,7 +52,7 @@ end
 
 function __duration_prompt
   # Print command duration
-  if test $CMD_DURATION; and test $CMD_DURATION != 0
+  if test $CMD_DURATION; and test $CMD_DURATION -ne 0
     set duration $CMD_DURATION
 
     set_color green

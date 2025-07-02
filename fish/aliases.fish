@@ -21,13 +21,13 @@ function db:conflicts:rmf
 end
 
 function rd:start
-  brew services restart postgresql@15
+  brew services restart postgresql@17
   brew services restart redis
   brew services restart mongodb-community
 end
 
 function rd:stop
-  brew services stop postgresql@15
+  brew services stop postgresql@17
   brew services stop redis
   brew services stop mongodb-community
 end
